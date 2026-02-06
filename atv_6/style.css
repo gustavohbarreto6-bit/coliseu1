@@ -1,0 +1,224 @@
+/* ==================================================
+   RESET GLOBAL
+================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================================
+   BODY - FUNDO COLISEU
+================================================== */
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* ARENA DE BATALHA */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.9)
+        );
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #f5f5f5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==================================================
+   CONTAINER PRINCIPAL
+================================================== */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 25px;
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    box-shadow: 
+        0 0 25px rgba(255, 215, 0, 0.35),
+        inset 0 0 20px rgba(0, 0, 0, 0.8);
+
+    text-align: center;
+    animation: aparecer 0.6s ease;
+}
+
+/* ==================================================
+   TÍTULO
+================================================== */
+h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ffd700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+}
+
+/* ==================================================
+   CAMPOS DE FORMULÁRIO
+================================================== */
+p, label {
+    text-align: left;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    background: #1e1e1e;
+    color: #fff;
+    font-size: 15px;
+
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+input:focus,
+select:focus {
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+    transform: scale(1.02);
+}
+
+/* ==================================================
+   BOTÕES
+================================================== */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    margin-top: 18px;
+
+    border-radius: 12px;
+    border: none;
+
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+/* Botão Gerar */
+button.gerar {
+    background: linear-gradient(135deg, #ffd700, #ff9f00);
+    color: #000;
+}
+
+button.gerar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+/* Botão Cancelar */
+button.cancelar {
+    background: #444;
+    color: #fff;
+}
+
+button.cancelar:hover {
+    background: #666;
+}
+
+/* ==================================================
+   RESULTADO DO GUERREIRO
+================================================== */
+#resultado {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 16px;
+
+    background: linear-gradient(145deg, #161616, #0e0e0e);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+
+    box-shadow:
+        inset 0 0 18px rgba(255, 215, 0, 0.25),
+        0 0 15px rgba(0, 0, 0, 0.8);
+
+    animation: surgir 0.5s ease;
+}
+
+/* Texto do resultado */
+#resultado h2 {
+    color: #ffd700;
+    margin-bottom: 12px;
+}
+
+#resultado p {
+    margin: 6px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* ==================================================
+   ANIMAÇÕES
+================================================== */
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}

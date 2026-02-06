@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG - Coliseu</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h3>🏟️ Bem-vindos ao Coliseu 🏟️</h3>
+
+    
+    <form id="formRPG">
+
+        <p>
+            Digite o nome do Guerreiro:
+            <input type="text" id="nome" placeholder="Digite">
+        </p>
+
+        <!-- Classe -->
+        <p>
+            Seu Guerreiro é da classe:
+            <select id="classe">
+                <option value="">Escolher classe do Guerreiro</option>
+                <option>Mago</option>
+                <option>Viking</option>
+                <option>Anjo</option>
+                <option>Demônio</option>
+                <option>Anão</option>
+                <option>Selvagem</option>
+                <option>Divindade</option>
+                <option>Ninja</option>
+                <option>Sayajin</option>
+            </select>
+        </p>
+
+        <!-- Arma -->
+        <p>
+            Escolha a arma:
+            <select id="arma">
+                <option value="">Escolher arma</option>
+                <option>Katana</option>
+                <option>Lança</option>
+                <option>Martelo</option>
+                <option>Machado</option>
+                <option>Faca</option>
+                <option>Kunai</option>
+                <option>Soco-Inglês</option>
+                <option>Nunchaku</option>
+                <option>Foice</option>
+                <option>Bastão</option>
+                <option>Tridente</option>
+                <option>Manopla</option>
+                <option>Arco e Flecha</option>
+                <option>Chicote</option>
+            </select>
+        </p>
+
+        <!-- Botões -->
+        <button type="button" onclick="gerarGuerreiro()">⚔️ Gerar Guerreiro</button>
+        <button type="reset">❌ Cancelar</button>
+
+<div id="resultado" class="resultado">
+</div>
+
+    </form>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
